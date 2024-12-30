@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Nunito Sans;
+}
+
+#wrapper{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background-image: url(/haunted-house-5120x2880-19136.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.navBox{
+    position: absolute;
+    height: 85vh;
+    width: 17.5vw;
+    right: 1rem;
+    top: 6.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(7.5px);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    z-index: 2;
+    font-size: 0.9vw;
+}
+
+.navBox.active{
+    opacity: 1;
+    animation: move 250ms ease 1;
+}
+@keyframes move{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+#wrapper::after{
+    content: "";
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    backdrop-filter: blur(10px);
+}
+#wrapper.wrap{
+    z-index: 1;
+}
+
+#wrapper::-webkit-scrollbar{
+    display: none;
+}
+
+.header{
+    margin: 2rem 5rem;
+    padding: 1rem 3rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(7.5px);
+    transition: border-color 0.3s ease;
+}
+
+.text{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    width: 200px;
+    /* border: 2px solid red; */
+}
+
+.nav, .some{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: relative; */
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.con{
+    width: 100%;
+    height: 32%;
+    display: flex;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    justify-content: space-between;
+    border-radius: 0.35rem;
+    opacity: 0;
+    flex-direction: column;
+    color: #fff;
+}
+
+.con1{
+    background-color: rgba(0, 0, 255, 0.15);
+}
+.con1.c1{
+    animation: movec1 0.5s ease 100ms 1 forwards;
+}
+@keyframes movec1 {
+    0%{
+        transform: translateX(120%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+
+.con2{
+    background-color: rgba(0, 255, 0, 0.15);
+}
+.con2.c2{
+    animation: movec2 0.5s ease 250ms 1 forwards;
+}
+@keyframes movec2 {
+    0%{
+        transform: translateX(120%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+
+.con3{
+    background-color: rgba(255, 0, 0, 0.15);
+}
+.con3.c3{
+    animation: movec3 0.5s ease 400ms 1 forwards;
+}
+@keyframes movec3 {
+    0%{
+        transform: translateX(120%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+
+.bod{
+    height: 15%;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 3rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bode{
+    width: 100%;
+    height: 15%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle{
+    width: 100%;
+    height: 15%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page2{
+    margin: 2rem 5rem;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* width: 100%; */
+    height: 80vh;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
